@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  color: lightgrey;
+  font-size: 28px;
+}
+.container {
+  width: 900px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 60px, 1fr;
+}
