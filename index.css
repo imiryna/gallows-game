@@ -5,8 +5,27 @@ body {
 }
 .container {
   width: 900px;
-  padding: 40px;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 60px, 1fr;
+  grid-template-columns: repeat(2, 500px);
+  grid-template-rows: 160px, 500px;
+  gap: 24px;
+}
+.password {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallows {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.alfabet {
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
