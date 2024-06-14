@@ -37,3 +37,13 @@ body {
   text-align: center;
   min-height: 280px;
 }
+.litera {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border: solid 3px lightgrey;
+  cursor: pointer;
+  border-radius: 15px;
+}
