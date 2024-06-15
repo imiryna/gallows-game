@@ -19,9 +19,10 @@ function createPassword() {
 function start() {
     let scope = "";
 
-    for(let i = 0; i <34; i++)
-  alfabet.innerHTML() = scope;
-
+    for(let i = 0; i <34; i++){
+         alfabet.innerHTML() = scope;
+}
+ 
 
   createPassword();
 }
