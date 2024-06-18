@@ -37,17 +37,16 @@ body {
     text-align: center;
     min-height: 280px;
     display: grid;
-    grid-template-columns: repeat(7, minmax(30px, 1fr));
-    gap: 5px;
+    grid-template-columns: repeat(5, minmax(30px, 1fr));
+    gap: 10px;
     justify-content: center;
     align-content: center;
 }
 .litera {
-  width: 30px;
-  height: 30px;
+  
   text-align: center;
-  padding: 5px;
-  margin: 5px;
+  padding: 10px 5px;
+ 
   border: solid 3px lightgrey;
   cursor: pointer;
   border-radius: 15px;
