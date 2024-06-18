@@ -1,4 +1,4 @@
-const alfabet = document.querySelector(".alfabet");
+// const alfabet = document.querySelector(".alfabet");
 
 const phrase = "BEGGARS CANNOT BE CHOOSERS";
 
@@ -16,14 +16,15 @@ function createPassword() {
   document.querySelector(".password").innerHTML = hiddenPhrase;
 }
 
-function start() {
-    let scope = "";
+window.onload = start;
 
-    for(let i = 0; i <34; i++){
-         alfabet.innerHTML() = scope;
-}
- 
+function start() {
+  let text = "";
+
+  for (let i = 0; i < 34; i++) {
+    text += i + "<div >A</div>";
+  }
+  document.querySelector(".alfabet").innerHTML = text;
 
   createPassword();
 }
-window.onload = start;
