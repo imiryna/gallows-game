@@ -51,9 +51,19 @@ function start() {
   let text = "";
 
   for (let i = 0; i < 25; i++) {
-    text += `<div class="litera">${alpha[i]}</div>`;
+    let elem = "alph" + i;
+    text += `<div class="litera" onclick="alertElement('${i}')" id=${elem}>${alpha[i]}</div>`;
   }
   document.querySelector(".alfabet").innerHTML = text;
 
   createPassword();
+}
+
+function alertElement(nr) {
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase.charAt(i) === alpha[nr]) {
+    } else {
+      console.log(i);
+    }
+  }
 }

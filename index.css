@@ -45,9 +45,14 @@ body {
 .litera {
   
   text-align: center;
-  padding: 10px 5px;
+  padding: 10px 0;
  
   border: solid 3px lightgrey;
   cursor: pointer;
   border-radius: 15px;
+}
+.litera:hover{
+    background-color: #2c2b2b;
+    color: aliceblue;
+    border: solid 3px  aliceblue;
 }
