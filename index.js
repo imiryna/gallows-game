@@ -22,7 +22,7 @@ function start() {
   let text = "";
 
   for (let i = 0; i < 34; i++) {
-    text += i + "<div >A</div>";
+    text += `<div class="litera">A</div>`;
   }
   document.querySelector(".alfabet").innerHTML = text;
 
