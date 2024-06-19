@@ -60,10 +60,15 @@ function start() {
 }
 
 function alertElement(nr) {
+  let updatedPhrase = "";
   for (let i = 0; i < phrase.length; i++) {
     if (phrase.charAt(i) === alpha[nr]) {
+      updatedPhrase += alpha[nr];
+      console.log(alpha[nr]);
+      console.log(updatedPhrase);
     } else {
-      console.log(i);
+      updatedPhrase += hiddenPhrase.charAt(i);
     }
   }
+  hiddenPhrase = updatedPhrase;
 }
