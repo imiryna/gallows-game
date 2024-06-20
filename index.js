@@ -59,16 +59,23 @@ function start() {
   createPassword();
 }
 
+String.prototype.changeSymbol = function (place, symbol) {
+  if (place > this.length) {
+    return this.toString();
+  } else {
+    console.log(this.substring(0, place));
+    console.log(this.substring(place + 1));
+    console.log(symbol);
+    console.log(this.substring(0, place) + symbol + this.substring(place + 1));
+    return this.substring(0, place) + symbol + this.substring(place + 1);
+  }
+};
+
 function alertElement(nr) {
-  let updatedPhrase = "";
   for (let i = 0; i < phrase.length; i++) {
     if (phrase.charAt(i) === alpha[nr]) {
-      updatedPhrase += alpha[nr];
-      console.log(alpha[nr]);
-      console.log(updatedPhrase);
-    } else {
-      updatedPhrase += hiddenPhrase.charAt(i);
+      hiddenPhrase = hiddenPhrase.changeSymbol(i, alpha[nr]);
     }
   }
-  hiddenPhrase = updatedPhrase;
+  createPassword();
 }
