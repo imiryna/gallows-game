@@ -56,3 +56,26 @@ body {
     color: aliceblue;
     border: solid 3px  aliceblue;
 }
+.udalo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.reset{
+    margin-left: 50px;
+    color:  #138c13;
+    cursor: pointer;
+    
+}
+.reset:hover{
+    color: aliceblue;
+}
+.neudalo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #C00;
+}

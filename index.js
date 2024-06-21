@@ -1,8 +1,10 @@
-// const alfabet = document.querySelector(".alfabet");
+const alfabet = document.querySelector(".alfabet");
 
 const phrase = "BEGGARS CANNOT BE CHOOSERS";
 
 let hiddenPhrase = "";
+
+let pic = 0;
 
 for (let i = 0; i < phrase.length; i++) {
   if (phrase[i] === " ") {
@@ -54,7 +56,7 @@ function start() {
     let elem = "alph" + i;
     text += `<div class="litera" onclick="alertElement('${i}')" id=${elem}>${alpha[i]}</div>`;
   }
-  document.querySelector(".alfabet").innerHTML = text;
+  alfabet.innerHTML = text;
 
   createPassword();
 }
@@ -63,10 +65,6 @@ String.prototype.changeSymbol = function (place, symbol) {
   if (place > this.length) {
     return this.toString();
   } else {
-    console.log(this.substring(0, place));
-    console.log(this.substring(place + 1));
-    console.log(symbol);
-    console.log(this.substring(0, place) + symbol + this.substring(place + 1));
     return this.substring(0, place) + symbol + this.substring(place + 1);
   }
 };
@@ -94,5 +92,22 @@ function alertElement(nr) {
     document.getElementById(elem).style.color = "#C00000";
     document.getElementById(elem).style.border = "3px solid #C00000";
     document.getElementById(elem).style.cursor = "default";
+    document.getElementById(elem).setAttribute("onclick", ";");
+
+    pic++;
+
+    let obraz = `img/s${pic}.jpg`;
+
+    document.querySelector(".gallows").innerHTML = `<img src="./${obraz}" alt="pic" />`;
+  }
+  //won game
+  if (phrase === hiddenPhrase) {
+    alfabet.innerHTML = `<div class="udalo">You are amazing!</div> It is "${phrase}"
+    <div class="reset" onclick="location.reload()">ONES MORE</div>`;
+  }
+  //gema over
+  if (pic >= 9) {
+    alfabet.innerHTML = `<div class="neudalo">GAME OVER!</div> 
+    <div class="over" onclick="location.reload()">TRY AGEN</div>`;
   }
 }
