@@ -14,9 +14,6 @@ body {
   margin-right: auto;
   padding: 10px 20px;
   min-height: 60px;
-/* 
-  /* border: solid 5px lightgrey;
-  border-radius: 5px; */ */
 
   text-align: center;
   font-size: 48px;
@@ -33,49 +30,47 @@ body {
   min-height: 280px;
 }
 .alfabet {
-    width: 450px;
-    text-align: center;
-    min-height: 280px;
-    display: grid;
-    grid-template-columns: repeat(5, minmax(30px, 1fr));
-    gap: 10px;
-    justify-content: center;
-    align-content: center;
+  width: 450px;
+  text-align: center;
+  min-height: 280px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(30px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
 }
 .litera {
-  
   text-align: center;
   padding: 10px 0;
- 
+
   border: solid 3px lightgrey;
   cursor: pointer;
   border-radius: 15px;
 }
-.litera:hover{
-    background-color: #2c2b2b;
-    color: aliceblue;
-    border: solid 3px  aliceblue;
+.litera:hover {
+  background-color: #2c2b2b;
+  color: aliceblue;
+  border: solid 3px aliceblue;
 }
-.udalo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+.udalo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
-.reset{
-    margin-left: 50px;
-    color:  #138c13;
-    cursor: pointer;
-    
+.reset {
+  margin-left: 50px;
+  color: #138c13;
+  cursor: pointer;
 }
-.reset:hover{
-    color: aliceblue;
+.reset:hover {
+  color: aliceblue;
 }
-.neudalo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #C00;
+.neudalo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #c00;
 }
