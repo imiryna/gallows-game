@@ -72,10 +72,27 @@ String.prototype.changeSymbol = function (place, symbol) {
 };
 
 function alertElement(nr) {
+  let checkedLetter = false;
   for (let i = 0; i < phrase.length; i++) {
     if (phrase.charAt(i) === alpha[nr]) {
       hiddenPhrase = hiddenPhrase.changeSymbol(i, alpha[nr]);
+      checkedLetter = true;
     }
   }
-  createPassword();
+  if (checkedLetter === true) {
+    let elem = "alph" + nr;
+
+    document.getElementById(elem).style.background = "#003300";
+    document.getElementById(elem).style.color = "#00C000";
+    document.getElementById(elem).style.border = "3px solid #00C000";
+    document.getElementById(elem).style.cursor = "default";
+
+    createPassword();
+  } else {
+    let elem = "alph" + nr;
+    document.getElementById(elem).style.background = "#330000";
+    document.getElementById(elem).style.color = "#C00000";
+    document.getElementById(elem).style.border = "3px solid #C00000";
+    document.getElementById(elem).style.cursor = "default";
+  }
 }
